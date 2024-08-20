@@ -18,9 +18,9 @@ sudo apt-get install -y git >/dev/null
 echo "Cloning Shuru..."
 rm -rf ~/.local/share/shuru
 git clone https://github.com/zabirauf/shuru.git ~/.local/share/shuru >/dev/null
-if [[ $OMAKUB_REF != "master" ]]; then
+if [[ $SHURU_REF != "master" ]]; then
 	cd ~/.local/share/shuru
-	git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
+	git fetch origin "${SHURU_REF:-stable}" && git checkout "${SHURU_REF:-stable}"
 	cd -
 fi
 
